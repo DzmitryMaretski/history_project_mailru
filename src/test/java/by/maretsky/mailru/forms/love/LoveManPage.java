@@ -50,11 +50,6 @@ public class LoveManPage extends BaseForm {
         for (counter = 0; counter < listSmartphones.size(); counter++) {
             Button openPersonalPage = new Button(By.xpath(String.format(goToUserPage, varList)),String.format("check person #%s", varList));
             openPersonalPage.click();
-
-            if (btnBack.isPresent()) {
-                browser.getDriver().navigate().back();
-                break;
-            }
             checkAge(ageFrom, ageTo);
             assertAge();
             browser.getDriver().navigate().back();
