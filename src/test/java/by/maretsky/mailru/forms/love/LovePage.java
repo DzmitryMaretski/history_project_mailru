@@ -27,21 +27,21 @@ public class LovePage extends BaseForm{
         super(By.xpath("//img[contains(@title,'love')]"), "love mail ru");
     }
 
-    public void setSex(String sex) {
+    private void setSex(String sex) {
         btnOpenListParamWho.click();
         cmbbSetGender = new ComboBox(By.xpath(String.format("//div[contains(@class,'param-who')]" +
                 "//div[contains(@name,'who')]//span[contains(text(),'%s')]", sex)),"set gender");
         cmbbSetGender.click();
     }
 
-    public void setLookForSex(String lookFor) {
+    private void setLookForSex(String lookFor) {
         cmbbOpenListParamLookFor.click();
         cmbbSetLookFor = new ComboBox(By.xpath(String.format("//div[contains(@class,'look-for-button')]" +
                 "/following-sibling::div//span[contains(text(),'%s')]", lookFor)),"set look for");
         cmbbSetLookFor.click();
     }
 
-    public void setAgeRange(String ageFrom, String ageTo) {
+    private void setAgeRange(String ageFrom, String ageTo) {
         click.click();
         txtbSetAgeFrom.setText(ageFrom);
         txtbSetAgeTo.setText(ageTo);

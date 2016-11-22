@@ -16,12 +16,13 @@ import java.util.regex.Pattern;
 public class LoveManPage extends BaseForm {
 
     private int counter;
-    Pattern patternAge = Pattern.compile("[\\d]+");
+    private Pattern patternAge = Pattern.compile("[\\d]+");
     public Label lblAge = new Label(By.id("self-age"), "get person age");
-    String getPages = "//div[contains(@class,'tiles-list')]//ul//li//a";
-    String goToUserPage = "//div[contains(@class,'tiles-list')]//ul//li[%s]//a";
-    String regAge;
+    private String getPages = "//div[contains(@class,'tiles-list')]//ul//li//a";
+    private String goToUserPage = "//div[contains(@class,'tiles-list')]//ul//li[%s]//a";
+    private String regAge;
     private boolean ageIsRight = true;
+    private Button btnBack = new Button(By.xpath("//div[@id='Anketa']//a[contains(text(),'поиск')]"), "page is not available");
     public LoveManPage() {
         super(By.xpath("//img[contains(@title,'love')]"), "love mail ru");
     }
@@ -30,7 +31,7 @@ public class LoveManPage extends BaseForm {
 
 
 
-    public void checkAge(String ageFrom, String ageTo) {
+    private void checkAge(String ageFrom, String ageTo) {
         String forRegular = lblAge.getText();
         Matcher matchAge = patternAge.matcher(forRegular);
         if (matchAge.find())
@@ -49,7 +50,7 @@ public class LoveManPage extends BaseForm {
         for (counter = 0; counter < listSmartphones.size(); counter++) {
             Button openPersonalPage = new Button(By.xpath(String.format(goToUserPage, varList)),String.format("check person #%s", varList));
             openPersonalPage.click();
-            Button btnBack = new Button(By.xpath("//div[@id='Anketa']//a[contains(text(),'поиск')]"));
+
             if (btnBack.isPresent()) {
                 browser.getDriver().navigate().back();
                 break;
@@ -61,7 +62,7 @@ public class LoveManPage extends BaseForm {
         }
     }
 
-    public void assertAge() {
+    private void assertAge() {
         Assert.assertTrue(ageIsRight, "age is not right");
     }
 

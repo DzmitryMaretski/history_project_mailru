@@ -44,6 +44,7 @@ public class CarsAdvancedSearchPage extends BaseForm {
     private Button btnSubmit = new Button(By.xpath("//div[contains(@class,'js-geo_popup')]" +
             "//button[contains(@class,'submit')]"));
 
+    private By pathToScroll = By.xpath("//div[contains(@class,'scroll__track')]");
     //check specs
     private String carsList = "//div[contains(@class,'offer-card')]//a[contains(@class,'offer-card__link')]";
     private String cars = "//div[contains(@class,'offer-card')][%s]//a[contains(@class,'offer-card__link')]";
@@ -60,7 +61,7 @@ public class CarsAdvancedSearchPage extends BaseForm {
 
     //car settings
     private void setCarBrand(String brand) {
-        btnBrandList.click();
+        btnBrandList.clickAndWait(pathToScroll);
         cmbbSetBrand = new Button(By.xpath(String.format(pathToBrand, brand)), "set car brand");
         cmbbSetBrand.clickAndWait(By.xpath(String.format("//div[contains(text(),'%s')]", brand)));
     }
