@@ -10,41 +10,41 @@
 				<package name="by.maretsky.mailru.tests.realEstateTests"/>
 			</packages>
 		</test>
-		<!--<test name="CarsTest">-->
-			<!--<parameter name="region" value="Россия"/>-->
-			<!--<parameter name="town" value="Москва"/>-->
-			<!--<parameter name="brand" value="BMW"/>-->
-			<!--<parameter name="model" value="5"/>-->
-			<!--<parameter name="yearFrom" value="2012"/>-->
-			<!--<packages>-->
-				<!--<package name="by.maretsky.mailru.tests.carsTests"/>-->
-			<!--</packages>-->
-		<!--</test>-->
-		<!--<test name="FilmsTest">-->
-			<!--<parameter name="yearFrom" value="2009"/>-->
-			<!--<parameter name="genres" value="комедия мелодрама"/>-->
-			<!--<parameter name="countries" value="США Франция"/>-->
-			<!--<packages>-->
-				<!--<package name="by.maretsky.mailru.tests.filmsTests"/>-->
-			<!--</packages>-->
-		<!--</test>-->
-		<!--<test name="HiTechCatalogTest">-->
-			<!--<parameter name="brand" value="Apple"/>-->
-			<!--<parameter name="priceFrom" value="30000"/>-->
-			<!--<parameter name="priceTo" value="50000"/>-->
-			<!--<packages>-->
-				<!--<package name="by.maretsky.mailru.tests.hiTechTests"/>-->
-			<!--</packages>-->
-		<!--</test>-->
-		<!--<test name="LoveTest">-->
-			<!--<parameter name="MySex" value="Парень"/>-->
-			<!--<parameter name="lookFor" value="Девушку"/>-->
-			<!--<parameter name="ageFrom" value="18"/>-->
-			<!--<parameter name="ageTo" value="23"/>-->
-			<!--<packages>-->
-				<!--<package name="by.maretsky.mailru.tests.loveTests"/>-->
-			<!--</packages>-->
-		<!--</test>-->
+		<test name="CarsTest">
+			<parameter name="region" value="Россия"/>
+			<parameter name="town" value="Москва"/>
+			<parameter name="brand" value="BMW"/>
+			<parameter name="model" value="5"/>
+			<parameter name="yearFrom" value="2012"/>
+			<packages>
+				<package name="by.maretsky.mailru.tests.carsTests"/>
+			</packages>
+		</test>
+		<test name="FilmsTest">
+			<parameter name="yearFrom" value="2009"/>
+			<parameter name="genres" value="комедия мелодрама"/>
+			<parameter name="countries" value="США Франция"/>
+			<packages>
+				<package name="by.maretsky.mailru.tests.filmsTests"/>
+			</packages>
+		</test>
+		<test name="HiTechCatalogTest">
+			<parameter name="brand" value="Apple"/>
+			<parameter name="priceFrom" value="30000"/>
+			<parameter name="priceTo" value="50000"/>
+			<packages>
+				<package name="by.maretsky.mailru.tests.hiTechTests"/>
+			</packages>
+		</test>
+		<test name="LoveTest">
+			<parameter name="MySex" value="Парень"/>
+			<parameter name="lookFor" value="Девушку"/>
+			<parameter name="ageFrom" value="18"/>
+			<parameter name="ageTo" value="23"/>
+			<packages>
+				<package name="by.maretsky.mailru.tests.loveTests"/>
+			</packages>
+		</test>
 	</tests>
 </suite>
 
