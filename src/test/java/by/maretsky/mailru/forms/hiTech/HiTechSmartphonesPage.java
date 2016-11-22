@@ -39,15 +39,15 @@ public class HiTechSmartphonesPage extends BaseForm{
         btnSumbitFilter.click();
     }
     private void setSortByPrice() {
-        btnSortByPrice.clickAndWait(By.xpath("html/body/div[7]/div/div[2]/div[4]/div/div/div[2]/div/div" +
-                "/div/div[2]/div[1]/div[1]/div/div[1]/div/div/div[2]/a[contains(text(),'5S')]"));
+        btnSortByPrice.click();
     }
 
     public void setSmartphoneFilter(String brand, String priceFrom, String priceTo) {
         setPriceFrom(priceFrom);
         setPriceTo(priceTo);
         setBrand(brand);
-        submitFilter();
         setSortByPrice();
+        submitFilter();
+
     }
 }

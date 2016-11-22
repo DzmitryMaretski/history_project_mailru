@@ -69,7 +69,6 @@ public class FilmsCatalogPage extends BaseForm{
         act.dragAndDropBy(slider, movSliderTo, 0).build().perform();
         //sliderFrom.makeActionOnSlider(-sliderValue, 0);
         //sliderFrom.makeActionOnSlider(movSliderTo, 0);
-
     }
 
 
@@ -118,9 +117,9 @@ public class FilmsCatalogPage extends BaseForm{
     }
 
     public void setParameters(String yearFrom, String genres, String countries) {
-        setYearsRangeFrom(yearFrom);
         setFilmGenre(genres);
         setCountries(countries);
+        setYearsRangeFrom(yearFrom);
         btnSearch.click();
     }
 

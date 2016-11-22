@@ -18,7 +18,7 @@ public class CarsAdvancedSearchPage extends BaseForm {
 
     String pathToBrand = "//div[contains(@class,'input__data')]" +
             "//div[contains(text(),'%s')]";
-    private ComboBox cmbbSetBrand;
+    private Button cmbbSetBrand;
 
     private Button btnModelList = new Button(By.xpath("//div[contains(text(),'Все модели')]//.."));
     String pathToModel = "//div[contains(@data-params,'Модель')]//div[contains(text(),'%s')]";
@@ -61,7 +61,7 @@ public class CarsAdvancedSearchPage extends BaseForm {
     //car settings
     private void setCarBrand(String brand) {
         btnBrandList.click();
-        cmbbSetBrand = new ComboBox(By.xpath(String.format(pathToBrand, brand)), "set car brand");
+        cmbbSetBrand = new Button(By.xpath(String.format(pathToBrand, brand)), "set car brand");
         cmbbSetBrand.clickAndWait(By.xpath(String.format("//div[contains(text(),'%s')]", brand)));
     }
 
