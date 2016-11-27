@@ -24,30 +24,25 @@ public class MainPage extends BaseForm {
     }
 
     public void openHiTechPage() {
-        browser.maximize();
         btnAllProjects.click();
         btnHiTech.click();
     }
 
     public void openRealEstatePage() {
-        browser.maximize();
         btnAllProjects.click();
         btnRealEstate.click();
     }
 
     public void openLovePage() {
-        browser.maximize();
         btnLove.click();
     }
 
     public void openFilmsPage() {
-        browser.maximize();
         btnAllProjects.click();
         btnFilms.click();
     }
 
     public void openCarsPage() {
-        browser.maximize();
         btnAllProjects.click();
         btnCars.click();
     }

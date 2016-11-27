@@ -22,7 +22,6 @@ public class LoveManPage extends BaseForm {
     private String goToUserPage = "//div[contains(@class,'tiles-list')]//ul//li[%s]//a";
     private String regAge;
     private boolean ageIsRight = true;
-    private Button btnBack = new Button(By.xpath("//div[@id='Anketa']//a[contains(text(),'поиск')]"), "page is not available");
     public LoveManPage() {
         super(By.xpath("//img[contains(@title,'love')]"), "love mail ru");
     }

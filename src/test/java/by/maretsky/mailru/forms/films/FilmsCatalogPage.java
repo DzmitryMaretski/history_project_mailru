@@ -65,10 +65,10 @@ public class FilmsCatalogPage extends BaseForm{
 
         int sliderValue = Integer.parseInt(slider.getCssValue("left").replaceAll("px", "")) + slider.getSize().width / 2;
         Actions act = new Actions(browser.getDriver());
-        act.dragAndDropBy(slider, -sliderValue, 0).build().perform();
-        act.dragAndDropBy(slider, movSliderTo, 0).build().perform();
-        //sliderFrom.makeActionOnSlider(-sliderValue, 0);
-        //sliderFrom.makeActionOnSlider(movSliderTo, 0);
+        //act.dragAndDropBy(slider, -sliderValue, 0).build().perform();
+        //act.dragAndDropBy(slider, movSliderTo, 0).build().perform();
+        sliderFrom.makeActionOnSlider(-sliderValue, 0);
+        sliderFrom.makeActionOnSlider(movSliderTo, 0);
     }
 
 

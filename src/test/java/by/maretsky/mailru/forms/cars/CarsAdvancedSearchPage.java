@@ -14,29 +14,29 @@ import java.util.regex.Pattern;
 public class CarsAdvancedSearchPage extends BaseForm {
 
     //cars parameters
-    private Button btnBrandList = new Button(By.xpath("//div[contains(text(),'Все марки')]/.."));
+    private Button btnBrandList = new Button(By.xpath("//div[contains(text(),'Все марки')]/.."), "open brand list");
 
     String pathToBrand = "//div[contains(@class,'input__data')]" +
             "//div[contains(text(),'%s')]";
     private Button cmbbSetBrand;
 
-    private Button btnModelList = new Button(By.xpath("//div[contains(text(),'Все модели')]//.."));
+    private Button btnModelList = new Button(By.xpath("//div[contains(text(),'Все модели')]//.."), "open model list");
     String pathToModel = "//div[contains(@data-params,'Модель')]//div[contains(text(),'%s')]";
     private ComboBox cmbbSetModel;
 
     private Button btnYearsFromList = new Button(By.xpath("//div[contains(@data-params,'Год')]" +
-            "//div[contains(text(),'Год от')]"));
+            "//div[contains(text(),'Год от')]"), "set year from");
     String pathToYear = "//div[contains(@data-params,'Год')]//div[contains(text(),'%s')]";
     private ComboBox cmbbYearsFromSet;
 
-    private Button btnSubmitFilter = new Button(By.xpath("//div[contains(@data-params,'Расширенный')]/following-sibling::a"));
+    private Button btnSubmitFilter = new Button(By.xpath("//div[contains(@data-params,'Расширенный')]/following-sibling::a"), "submit");
 
-    private Button btnOpenGeoList = new Button(By.xpath("//div[contains(@class,'geo')]//span"));
+    private Button btnOpenGeoList = new Button(By.xpath("//div[contains(@class,'geo')]//span"), "open geography list");
 
     String pathToCountry = "//label[contains(@class,'tab__item')]//span[contains(text(),'%s')]/..";
     private Button btnSetCountry;
     private TextBox txtbTown = new TextBox(By.xpath("//div[contains(@class,'input__data')]" +
-            "//input[contains(@placeholder,'название города')]"));
+            "//input[contains(@placeholder,'название города')]"), "input name of town");
     String pathToTown = "//div[contains(@class,'input__data js-field')]" +
             "//div[contains(text(),'%s')]";
     private Button btnSetTown;

@@ -27,6 +27,10 @@ public class CheckBox extends BaseElement{
         return this.getElement().isEnabled();
     }
 
+    public void check() {
+        element.click();
+    }
+
     public CheckBox(By locator) {
         super(locator);
     }

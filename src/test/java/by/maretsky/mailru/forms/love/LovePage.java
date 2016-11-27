@@ -16,8 +16,9 @@ public class LovePage extends BaseForm{
     private ComboBox cmbbOpenListParamLookFor = new ComboBox(By.xpath("//div[contains(@class,'look-for-button')]"),
             "open list look for");
 
-    private Button click = new Button(By.xpath(".//*[@id='web-search-search_form__0']/table/tbody/tr/td[1]/div/div[3]/div[2]"));
-    private TextBox txtbSetAgeFrom = new TextBox(By.xpath(".//*[@id='web-search-search_form__0']/table/tbody/tr/td[1]/div/div[3]/div[2]/input[1]"));
+    private Button OpenAgeList = new Button(By.xpath("//div[contains(@class,'param-age')]//div[contains(@class,'button')]"));
+    private TextBox txtbSetAgeFrom = new TextBox(By.xpath("//div[contains(@class,'param-age')]" +
+            "//input[contains(@name,'age-from')]"), "set age from");
 
     private TextBox txtbSetAgeTo = new TextBox(By.xpath("//div[contains(@class,'form-param-age')]" +
             "//input[contains(@data-bind,'ageTo')]"),"set age to");
@@ -42,7 +43,7 @@ public class LovePage extends BaseForm{
     }
 
     private void setAgeRange(String ageFrom, String ageTo) {
-        click.click();
+        OpenAgeList.click();
         txtbSetAgeFrom.setText(ageFrom);
         txtbSetAgeTo.setText(ageTo);
     }

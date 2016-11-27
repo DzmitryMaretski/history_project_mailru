@@ -1,6 +1,7 @@
 package webdriver.elements;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.interactions.Actions;
 
 
 public class Slider extends BaseElement{
@@ -25,6 +26,10 @@ public class Slider extends BaseElement{
         return this.getElement().isEnabled();
     }
 
+    public void makeActionOnSlider(int xTo, int yTo) {
+        Actions act = new Actions(browser.getDriver());
+        act.dragAndDropBy(element, xTo, yTo).build().perform();
+    }
     public Slider(By locator) {
         super(locator);
     }

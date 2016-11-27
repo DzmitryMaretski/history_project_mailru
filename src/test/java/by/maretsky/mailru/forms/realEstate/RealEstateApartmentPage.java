@@ -20,11 +20,11 @@ public class RealEstateApartmentPage extends BaseForm {
         super(By.xpath("//img[contains(@title,'Недвижимость')]"), "Купить однокмнатную");
     }
 
-    private Label getTown = new Label(By.xpath("html/body/div[6]/div[3]/div[1]/div/div[2]/div[1]/div/div[2]/div/span/span"));
-    private Label getSubway = new Label(By.xpath("html/body/div[6]/div[3]/div[4]" +
-            "/div/div[1]/div/div/div/div[2]/div/span[2]/span"));
-    private Label getApartmentType = new Label(By.xpath("html/body/div[6]/div[3]" +
-            "/div[1]/div/div[2]/div[1]/div/div[1]/div/span/h1"));
+    private Label getTown = new Label(By.xpath("//div[contains(@class,'wrapper_relative')]//span[contains(@class,'inner')]"));
+    private Label getSubway = new Label(By.xpath("//div[contains(@class,'cols__inner')]" +
+            "//i[contains(@class,'subway')]/following-sibling::span"));
+    private Label getApartmentType = new Label(By.xpath("//div[contains(@class,'inner')]" +
+            "//span[contains(@class,'text')]//h1"));
     private boolean townIsRight = true;
     private boolean subwayIsRight = true;
     private boolean apartmentIsRight = true;
@@ -64,7 +64,8 @@ public class RealEstateApartmentPage extends BaseForm {
         logger.info(String.format("apartment type: %s", type));
     }
 
-    String pathToPersonalPage = "html/body/div[6]/div[5]/div/div/div[2]/div/div[1]/div[3]/div/div[%s]/div/div[2]/div[1]/div[1]/a";
+    String pathToPersonalPage = "//div[contains(@class,'search-results')]" +
+            "//div[contains(@class,'js-track_click')][%s]//a[contains(@class,'link')]";
     public void checkSpecs(String town, String subway, String type) {
         int counter;
         int varList = 1;

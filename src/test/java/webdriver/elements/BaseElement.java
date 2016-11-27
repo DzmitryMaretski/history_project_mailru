@@ -261,10 +261,7 @@ public abstract class BaseElement extends BaseEntity {
 		return this.element.getSize();
 	}
 
-	public void makeActionOnSlider(int xTo, int yTo) {
-		Actions act = new Actions(browser.getDriver());
-		act.dragAndDropBy(element, xTo, yTo).build().perform();
-	}
+
 	/**
 	 * Get the item text (inner text).
 	 * @return Text of element
