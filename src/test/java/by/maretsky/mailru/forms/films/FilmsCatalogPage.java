@@ -63,12 +63,13 @@ public class FilmsCatalogPage extends BaseForm{
         }
 
 
-        int sliderValue = Integer.parseInt(slider.getCssValue("left").replaceAll("px", "")) + slider.getSize().width / 2;
+        int sliderValue = Integer.parseInt(slider.getCssValue("left").replaceAll("px", ""))
+                + slider.getSize().width / 2;
         Actions act = new Actions(browser.getDriver());
-        //act.dragAndDropBy(slider, -sliderValue, 0).build().perform();
-        //act.dragAndDropBy(slider, movSliderTo, 0).build().perform();
-        sliderFrom.makeActionOnSlider(-sliderValue, 0);
-        sliderFrom.makeActionOnSlider(movSliderTo, 0);
+        act.dragAndDropBy(slider, -sliderValue, 0).build().perform();
+        act.dragAndDropBy(slider, movSliderTo, 0).build().perform();
+        //sliderFrom.makeActionOnSlider(-sliderValue, 0);
+        //sliderFrom.makeActionOnSlider(movSliderTo, 0);
     }
 
 
@@ -83,7 +84,7 @@ public class FilmsCatalogPage extends BaseForm{
                 Label lblGenre = new Label(By.xpath(String.format(pathCheck,counter)));
                 String countryText = lblGenre.getText();
                 if (countryText.equalsIgnoreCase(listGenreQuery[i])) {
-                    Button btnCheckGenre = new Button(By.xpath(String.format(pathToCheck, j+1)));
+                    Button btnCheckGenre = new Button(By.xpath(String.format(pathToCheck, j+1)), String.format("check genre: %s", listGenreQuery[i]));
                     btnCheckGenre.click();
                     break;
                 }
@@ -98,15 +99,15 @@ public class FilmsCatalogPage extends BaseForm{
         btnListCountries.click();
         String[] listCountryQuery = countries.split("\\s+");
 
-        List<WebElement> listGenres;
-        listGenres = BaseElement.findElements(By.xpath(findCountriesElements));
+        List<WebElement> listCountry;
+        listCountry = BaseElement.findElements(By.xpath(findCountriesElements));
         int counter = 1;
         for (int i = 0; i < listCountryQuery.length; i++) {
-            for (int j = 0; j < listGenres.size(); j++) {
-                Label lblCountry = new Label(By.xpath(String.format(pathCheck, counter)));
+            for (int j = 0; j < listCountry.size(); j++) {
+                Label lblCountry = new Label(By.xpath(String.format(pathCheck, counter)), "set film genre");
                 String countryText = lblCountry.getText();
                 if (countryText.equalsIgnoreCase(listCountryQuery[i])) {
-                    Button btnCheck = new Button(By.xpath(String.format(pathToCheck, j+1)));
+                    Button btnCheck = new Button(By.xpath(String.format(pathToCheck, j+1)), String.format("check country: %s", listCountryQuery[i]));
                     btnCheck.click();
                     break;
                 }
