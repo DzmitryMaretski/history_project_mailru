@@ -1,0 +1,527 @@
+Started by user anonymous
+Building in workspace C:\Users\Dmitry\.jenkins\jobs\test\workspace
+ > git.exe rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git.exe config remote.origin.url https://github.com/crzmp3jke/project_mailru # timeout=10
+Fetching upstream changes from https://github.com/crzmp3jke/project_mailru
+ > git.exe --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git.exe fetch --tags --progress https://github.com/crzmp3jke/project_mailru +refs/heads/*:refs/remotes/origin/*
+ > git.exe rev-parse "refs/remotes/origin/master^{commit}" # timeout=10
+ > git.exe rev-parse "refs/remotes/origin/origin/master^{commit}" # timeout=10
+Checking out Revision b4eff1a8a4643d3d40581937d9a1a59e6a86cbce (refs/remotes/origin/master)
+ > git.exe config core.sparsecheckout # timeout=10
+ > git.exe checkout -f b4eff1a8a4643d3d40581937d9a1a59e6a86cbce
+ > git.exe rev-list b4eff1a8a4643d3d40581937d9a1a59e6a86cbce # timeout=10
+[workspace] $ cmd.exe /C "C:\apache-maven-3.3.9\bin\mvn.cmd clean test -Dsuite=TestSuite && exit %%ERRORLEVEL%%"
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for by.maretsky.mailru:project_mailru:jar:1.2.9-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-jar-plugin is missing. @ line 177, column 21
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building project_mailru 1.2.9-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ project_mailru ---
+[INFO] Deleting C:\Users\Dmitry\.jenkins\jobs\test\workspace\target
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.5:bundle (default) @ project_mailru ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:resources (default-resources) @ project_mailru ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\Users\Dmitry\.jenkins\jobs\test\workspace\src\main\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.0:compile (default-compile) @ project_mailru ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:testResources (default-testResources) @ project_mailru ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 8 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.0:testCompile (default-testCompile) @ project_mailru ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 33 source files to C:\Users\Dmitry\.jenkins\jobs\test\workspace\target\test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.16:test (default-test) @ project_mailru ---
+[INFO] Surefire report directory: C:\Users\Dmitry\.jenkins\jobs\test\workspace\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running TestSuite
+Starting ChromeDriver 2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed) on port 16378
+Only local connections are allowed.
+14:30:59,635  INFO - browser driver was constructed
+14:30:59,637  INFO - Browser 'chrome' ready...
+14:30:59,735  INFO - -----------------------------------------------------------------------------------------------------------------
+14:30:59,735  INFO - =====================  Test case: 'by.maretsky.mailru.tests.realEstateTests.RealEstateTest' =====================
+14:30:59,735  INFO - -----------------------------------------------------------------------------------------------------------------
+14:30:59,735  INFO - --------==[ Preconditions ]==--------
+14:31:01,976  INFO - --------==[ Step 1 ]==--------
+14:31:02,108  INFO - Form 'mail ru' appears in 127msec
+14:31:03,359  INFO - Button 'Open list of projects' :: Clicking
+14:31:03,507  INFO - Button 'Open real estate page' :: Clicking
+14:31:06,255  INFO - --------==[ Step 2 ]==--------
+14:31:06,330  INFO - Form 'Real estate' appears in 70msec
+14:31:06,393  INFO - Button 'get page with extended filter' :: Clicking
+14:31:06,463  INFO - --------==[ Step 3 ]==--------
+14:31:06,522  INFO - Form 'Купить однокмнатную' appears in 58msec
+14:31:10,501  INFO - Button 'get region list' :: Clicking
+14:31:10,715  INFO - Button 'set russia' :: Clicking
+14:31:11,005  INFO - Button 'saint-petserburg' :: Clicking
+14:31:11,254  INFO - Button 'saint-petserburg' :: Clicking
+14:31:11,528  INFO - Button 'submit town' :: Clicking
+14:31:15,121  INFO - Button 'null' :: Clicking
+14:31:15,876  INFO - Button 'submit subway station' :: Clicking
+14:31:15,998  INFO - Button 'submit town' :: Clicking
+14:31:16,249  INFO - Button 'apartment choice' :: Clicking
+14:31:16,434  INFO - Button 'null' :: Clicking
+14:31:17,083  INFO - Form 'Купить однокмнатную' appears in 274msec
+14:31:17,212  INFO - Button 'check apartment #1' :: Clicking
+14:31:19,817  INFO - Town: Санкт-Петербург
+14:31:19,925  INFO - Subway: Черная речка
+14:31:20,089  INFO - apartment type: Квартира
+14:31:20,309  INFO - Button 'check apartment #2' :: Clicking
+14:31:22,444  INFO - Town: Санкт-Петербург
+14:31:22,553  INFO - Subway: Черная речка
+14:31:22,619  INFO - apartment type: Квартира
+14:31:22,751  INFO - Button 'check apartment #3' :: Clicking
+14:31:24,184  INFO - Town: Санкт-Петербург
+14:31:24,562  INFO - Subway: Черная речка
+14:31:24,721  INFO - apartment type: Квартира
+14:31:24,833  INFO - Button 'check apartment #4' :: Clicking
+14:31:26,894  INFO - Town: Санкт-Петербург
+14:31:26,963  INFO - Subway: Черная речка
+14:31:27,049  INFO - apartment type: Квартира
+14:31:27,188  INFO - Button 'check apartment #5' :: Clicking
+14:31:29,298  INFO - Town: Санкт-Петербург
+14:31:29,368  INFO - Subway: Черная речка
+14:31:29,434  INFO - apartment type: Квартира
+14:31:29,563  INFO - Button 'check apartment #6' :: Clicking
+14:31:31,558  INFO - Town: Санкт-Петербург
+14:31:31,707  INFO - Subway: Черная речка
+14:31:31,774  INFO - apartment type: Квартира
+14:31:31,902  INFO - Button 'check apartment #7' :: Clicking
+14:31:33,784  INFO - Town: Санкт-Петербург
+14:31:33,851  INFO - Subway: Черная речка
+14:31:33,917  INFO - apartment type: Квартира
+14:31:34,046  INFO - Button 'check apartment #8' :: Clicking
+14:31:42,141  INFO - Town: Санкт-Петербург
+14:31:42,206  INFO - Subway: Черная речка
+14:31:42,272  INFO - apartment type: Квартира
+14:31:42,406  INFO - Button 'check apartment #9' :: Clicking
+14:31:43,808  INFO - Town: Санкт-Петербург
+14:31:44,089  INFO - Subway: Черная речка
+14:31:44,158  INFO - apartment type: Квартира
+14:31:44,282  INFO - Button 'check apartment #10' :: Clicking
+14:31:46,188  INFO - Town: Санкт-Петербург
+14:31:46,256  INFO - Subway: Черная речка
+14:31:46,325  INFO - apartment type: Квартира
+14:31:46,453  INFO - Button 'check apartment #11' :: Clicking
+14:31:48,276  INFO - Town: Санкт-Петербург
+14:31:48,361  INFO - Subway: Черная речка
+14:31:48,423  INFO - apartment type: Квартира
+14:31:48,548  INFO - Button 'check apartment #12' :: Clicking
+14:31:50,363  INFO - Town: Санкт-Петербург
+14:31:50,478  INFO - Subway: Черная речка
+14:31:50,544  INFO - apartment type: Квартира
+14:31:50,673  INFO - Button 'check apartment #13' :: Clicking
+14:31:50,834  INFO - Button 'check apartment #14' :: Clicking
+14:31:53,363  INFO - Town: Санкт-Петербург
+14:31:53,454  INFO - Subway: Черная речка
+14:31:53,520  INFO - apartment type: Квартира
+14:31:54,712  INFO - Town: Санкт-Петербург
+14:31:54,777  INFO - Subway: Черная речка
+14:31:54,844  INFO - apartment type: Квартира
+14:31:54,971  INFO - Button 'check apartment #15' :: Clicking
+14:31:56,528  INFO - Town: Санкт-Петербург
+14:31:56,594  INFO - Subway: Черная речка
+14:31:56,674  INFO - apartment type: Квартира
+14:31:56,738  INFO - 
+14:31:56,739  INFO - ****************************************************************************************
+14:31:56,739  INFO - ***** Test case: 'by.maretsky.mailru.tests.realEstateTests.RealEstateTest' Passed! *****
+14:31:56,739  INFO - ****************************************************************************************
+14:31:56,739  INFO - 
+14:31:57,964  INFO - driver.quit...
+14:31:57,964  INFO - killing processes
+Starting ChromeDriver 2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed) on port 42233
+Only local connections are allowed.
+14:32:00,862  INFO - browser driver was constructed
+14:32:00,862  INFO - Browser 'chrome' ready...
+14:32:00,893  INFO - -----------------------------------------------------------------------------------------------------
+14:32:00,893  INFO - =====================  Test case: 'by.maretsky.mailru.tests.carsTests.CarsTest' =====================
+14:32:00,893  INFO - -----------------------------------------------------------------------------------------------------
+14:32:00,893  INFO - --------==[ Preconditions ]==--------
+14:32:02,438  INFO - --------==[ Step 1 ]==--------
+14:32:02,504  INFO - Form 'mail ru' appears in 66msec
+14:32:03,750  INFO - Button 'Open list of projects' :: Clicking
+14:32:03,885  INFO - Button 'Open cars page' :: Clicking
+14:32:05,790  INFO - --------==[ Step 2 ]==--------
+14:32:05,881  INFO - Form 'cars page' appears in 90msec
+14:32:05,942  INFO - Button 'Open advanced search page' :: Clicking
+14:32:08,073  INFO - --------==[ Step 3 ]==--------
+14:32:08,131  INFO - Form 'cars page' appears in 57msec
+14:32:08,192  INFO - Button 'null' :: Clicking
+14:32:08,926  INFO - Button 'set region' :: Clicking
+14:32:09,123  INFO - Text Field 'null' :: Typing 'Москва'
+14:32:09,833  INFO - Button 'set town' :: Clicking
+14:32:09,997  INFO - Button 'null' :: Clicking
+14:32:10,174  INFO - --------==[ Step 4 ]==--------
+14:32:10,241  INFO - Button 'null' :: Clicking
+14:32:11,020  INFO - Button 'set car brand' :: Clicking
+14:32:11,226  INFO - Button 'null' :: Clicking
+14:32:11,451  INFO - ComboBox 'set car model' :: Clicking
+14:32:11,575  INFO - Button 'null' :: Clicking
+14:32:11,721  INFO - ComboBox 'set release date' :: Clicking
+14:32:11,836  INFO - Button 'null' :: Clicking
+14:32:13,716  INFO - --------==[ Step 5 ]==--------
+14:32:13,801  INFO - Button 'check car #1' :: Clicking
+14:32:15,388  INFO - Brand is: BMW
+14:32:15,388  INFO - Model is: 5
+14:32:15,443  INFO - Release date is: 2013
+14:32:16,613  INFO - Button 'check car #2' :: Clicking
+14:32:18,665  INFO - Brand is: BMW
+14:32:18,665  INFO - Model is: 5
+14:32:18,723  INFO - Release date is: 2013
+14:32:19,894  INFO - Button 'check car #3' :: Clicking
+14:32:21,199  INFO - Brand is: BMW
+14:32:21,199  INFO - Model is: 5
+14:32:21,249  INFO - Release date is: 2015
+14:32:22,252  INFO - Button 'check car #4' :: Clicking
+14:32:23,635  INFO - Brand is: BMW
+14:32:23,635  INFO - Model is: 5
+14:32:23,686  INFO - Release date is: 2015
+14:32:24,676  INFO - Button 'check car #5' :: Clicking
+14:32:26,399  INFO - Brand is: BMW
+14:32:26,400  INFO - Model is: 5
+14:32:26,456  INFO - Release date is: 2014
+14:32:27,532  INFO - Button 'check car #6' :: Clicking
+14:32:28,821  INFO - Brand is: BMW
+14:32:28,821  INFO - Model is: 5
+14:32:28,881  INFO - Release date is: 2012
+14:32:29,962  INFO - Button 'check car #7' :: Clicking
+14:32:31,265  INFO - Brand is: BMW
+14:32:31,265  INFO - Model is: 5
+14:32:31,316  INFO - Release date is: 2014
+14:32:32,361  INFO - Button 'check car #8' :: Clicking
+14:32:33,541  INFO - Brand is: BMW
+14:32:33,541  INFO - Model is: 5
+14:32:33,616  INFO - Release date is: 2012
+14:32:34,611  INFO - Button 'check car #9' :: Clicking
+14:32:35,826  INFO - Brand is: BMW
+14:32:35,826  INFO - Model is: 5
+14:32:35,905  INFO - Release date is: 2013
+14:32:36,953  INFO - Button 'check car #10' :: Clicking
+14:32:38,147  INFO - Brand is: BMW
+14:32:38,147  INFO - Model is: 5
+14:32:38,197  INFO - Release date is: 2014
+14:32:39,216  INFO - Button 'check car #11' :: Clicking
+14:32:40,398  INFO - Brand is: BMW
+14:32:40,399  INFO - Model is: 5
+14:32:40,446  INFO - Release date is: 2012
+14:32:41,486  INFO - Button 'check car #12' :: Clicking
+14:32:42,781  INFO - Brand is: BMW
+14:32:42,781  INFO - Model is: 5
+14:32:42,862  INFO - Release date is: 2013
+14:32:43,911  INFO - Button 'check car #13' :: Clicking
+14:32:45,126  INFO - Brand is: BMW
+14:32:45,126  INFO - Model is: 5
+14:32:45,173  INFO - Release date is: 2014
+14:32:46,228  INFO - Button 'check car #14' :: Clicking
+14:32:47,486  INFO - Brand is: BMW
+14:32:47,486  INFO - Model is: 5
+14:32:47,533  INFO - Release date is: 2012
+14:32:48,572  INFO - Button 'check car #15' :: Clicking
+14:32:49,840  INFO - Brand is: BMW
+14:32:49,840  INFO - Model is: 5
+14:32:49,886  INFO - Release date is: 2014
+14:32:51,009  INFO - Button 'check car #16' :: Clicking
+14:32:52,301  INFO - Brand is: BMW
+14:32:52,301  INFO - Model is: 5
+14:32:52,381  INFO - Release date is: 2013
+14:32:53,505  INFO - Button 'check car #17' :: Clicking
+14:32:54,840  INFO - Brand is: BMW
+14:32:54,840  INFO - Model is: 5
+14:32:54,889  INFO - Release date is: 2015
+14:32:55,969  INFO - Button 'check car #18' :: Clicking
+14:32:57,306  INFO - Brand is: BMW
+14:32:57,307  INFO - Model is: 5
+14:32:57,404  INFO - Release date is: 2013
+14:32:58,531  INFO - Button 'check car #19' :: Clicking
+14:32:59,747  INFO - Brand is: BMW
+14:32:59,748  INFO - Model is: 5
+14:32:59,795  INFO - Release date is: 2014
+14:33:00,881  INFO - Button 'check car #20' :: Clicking
+14:33:02,144  INFO - Brand is: BMW
+14:33:02,144  INFO - Model is: 5
+14:33:02,191  INFO - Release date is: 2013
+14:33:03,182  INFO - 
+14:33:03,183  INFO - ****************************************************************************
+14:33:03,183  INFO - ***** Test case: 'by.maretsky.mailru.tests.carsTests.CarsTest' Passed! *****
+14:33:03,183  INFO - ****************************************************************************
+14:33:03,183  INFO - 
+14:33:04,447  INFO - driver.quit...
+14:33:04,447  INFO - killing processes
+Starting ChromeDriver 2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed) on port 9098
+Only local connections are allowed.
+14:33:07,233  INFO - browser driver was constructed
+14:33:07,233  INFO - Browser 'chrome' ready...
+14:33:07,254  INFO - -------------------------------------------------------------------------------------------------------
+14:33:07,254  INFO - =====================  Test case: 'by.maretsky.mailru.tests.filmsTests.FilmsTest' =====================
+14:33:07,254  INFO - -------------------------------------------------------------------------------------------------------
+14:33:07,254  INFO - --------==[ Preconditions ]==--------
+14:33:08,386  INFO - --------==[ Step 1 ]==--------
+14:33:08,451  INFO - Form 'mail ru' appears in 64msec
+14:33:09,682  INFO - Button 'Open list of projects' :: Clicking
+14:33:09,802  INFO - Button 'Open films page' :: Clicking
+14:33:12,140  INFO - --------==[ Step 2 ]==--------
+14:33:12,206  INFO - Form 'open page with films' appears in 65msec
+14:33:12,404  INFO - Button 'genre' :: Clicking
+14:33:13,149  INFO - Button 'null' :: Clicking
+14:33:13,684  INFO - Button 'null' :: Clicking
+14:33:13,855  INFO - Button 'countries' :: Clicking
+14:33:14,309  INFO - Button 'null' :: Clicking
+14:33:15,022  INFO - Button 'null' :: Clicking
+14:33:15,198  INFO - Button 'open' :: Clicking
+14:33:15,603  INFO - Button 'search by filter' :: Clicking
+14:33:17,364  INFO - --------==[ Step 3 ]==--------
+14:33:17,666  INFO - Form 'open page with films' appears in 301msec
+14:33:17,687  INFO - check films specs
+14:33:17,788  INFO - film from: Франция
+14:33:17,789  INFO - film genre: комедия
+14:33:17,889  INFO - Release date: 2011
+14:33:17,985  INFO - film from: Франция
+14:33:17,985  INFO - film genre: комедия
+14:33:18,112  INFO - Release date: 2011
+14:33:18,200  INFO - film from: Франция
+14:33:18,200  INFO - film genre: комедия
+14:33:18,200  INFO - film genre: мелодрама
+14:33:18,257  INFO - Release date: 1998
+14:33:18,258  WARN - 
+14:33:18,258  WARN - >>>>>>>> TEST FAILED <<<<<<<<
+14:33:18,258  WARN - 
+14:33:18,258 FATAL - it's not right year expected [true] but found [false]
+14:33:19,329  INFO - driver.quit...
+14:33:19,330  INFO - killing processes
+Starting ChromeDriver 2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed) on port 51786
+Only local connections are allowed.
+14:33:21,837  INFO - browser driver was constructed
+14:33:21,837  INFO - Browser 'chrome' ready...
+14:33:21,865  INFO - ----------------------------------------------------------------------------------------------------------------
+14:33:21,865  INFO - =====================  Test case: 'by.maretsky.mailru.tests.hiTechTests.HiTechCatalogTest' =====================
+14:33:21,865  INFO - ----------------------------------------------------------------------------------------------------------------
+14:33:21,865  INFO - --------==[ Preconditions ]==--------
+14:33:23,504  INFO - --------==[ Step 1 ]==--------
+14:33:23,564  INFO - Form 'mail ru' appears in 60msec
+14:33:24,769  INFO - Button 'Open list of projects' :: Clicking
+14:33:24,902  INFO - Button 'open Hi-Tech page' :: Clicking
+14:33:27,018  INFO - --------==[ Step 2 ]==--------
+14:33:27,076  INFO - Form 'Hi-tech page' appears in 57msec
+14:33:27,131  INFO - Button 'close news notification' :: Clicking
+14:33:27,249  INFO - Button 'open catalog page' :: Clicking
+14:33:28,538  INFO - --------==[ Step 3 ]==--------
+14:33:28,618  INFO - Form 'Hi-tech page' appears in 79msec
+14:33:28,674  INFO - Button 'open smartphones' :: Clicking
+14:33:29,976  INFO - --------==[ Step 4 ]==--------
+14:33:30,104  INFO - Form 'Hi-tech page' appears in 127msec
+14:33:30,245  INFO - Text Field 'enter price from' :: Typing '30000'
+14:33:30,451  INFO - Text Field 'enter price to' :: Typing '50000'
+14:33:30,716  INFO - CheckBox 'set brand' :: Clicking
+14:33:31,397  INFO - Button 'sort by price from lower to higher' :: Clicking
+14:33:31,591  INFO - Button 'search by filter' :: Clicking
+14:33:31,784  INFO - --------==[ Step 5 ]==--------
+14:33:32,021  INFO - Form 'Hi-tech page' appears in 236msec
+14:33:32,101  INFO - SMARTPHONES SPECS ON PAGE
+14:33:32,209  INFO - Button 'check smartphone' :: Clicking
+14:33:34,291 ERROR - error price
+14:33:34,291  WARN - 
+14:33:34,291  WARN - >>>>>>>> TEST FAILED <<<<<<<<
+14:33:34,291  WARN - 
+14:33:34,291 FATAL - 18999: Price is not right expected [true] but found [false]
+14:33:35,369  INFO - driver.quit...
+14:33:35,369  INFO - killing processes
+Starting ChromeDriver 2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed) on port 33131
+Only local connections are allowed.
+14:33:37,392  INFO - browser driver was constructed
+14:33:37,392  INFO - Browser 'chrome' ready...
+14:33:37,413  INFO - -----------------------------------------------------------------------------------------------------
+14:33:37,413  INFO - =====================  Test case: 'by.maretsky.mailru.tests.loveTests.LoveTest' =====================
+14:33:37,413  INFO - -----------------------------------------------------------------------------------------------------
+14:33:37,413  INFO - --------==[ Preconditions ]==--------
+14:33:38,558  INFO - --------==[ Step 1 ]==--------
+14:33:38,615  INFO - Form 'mail ru' appears in 57msec
+14:33:39,842  INFO - Button 'open love page' :: Clicking
+14:33:42,387  INFO - --------==[ Step 2 ]==--------
+14:33:42,502  INFO - Form 'love mail ru' appears in 115msec
+14:33:42,600  INFO - ComboBox 'open list who' :: Clicking
+14:33:42,900  INFO - ComboBox 'set gender' :: Clicking
+14:33:43,119  INFO - ComboBox 'open list look for' :: Clicking
+14:33:43,876  INFO - ComboBox 'set look for' :: Clicking
+14:33:44,016  INFO - Button 'null' :: Clicking
+14:33:44,280  INFO - Text Field 'null' :: Typing '18'
+14:33:44,480  INFO - Text Field 'set age to' :: Typing '23'
+14:33:44,585  INFO - Button 'submit filter' :: Clicking
+14:33:46,685  INFO - --------==[ Step 3 ]==--------
+14:33:46,770  INFO - Form 'love mail ru' appears in 84msec
+14:33:46,885  INFO - Button 'check person #1' :: Clicking
+14:33:49,448  INFO - 23 years old
+14:33:52,119  INFO - Button 'check person #2' :: Clicking
+14:33:54,500  INFO - 21 years old
+14:33:56,235  INFO - Button 'check person #3' :: Clicking
+14:33:58,503  INFO - 22 years old
+14:34:00,426  INFO - Button 'check person #4' :: Clicking
+14:34:04,316  INFO - 23 years old
+14:34:06,118  INFO - Button 'check person #5' :: Clicking
+14:34:08,126  INFO - 20 years old
+14:34:09,994  INFO - Button 'check person #6' :: Clicking
+14:34:11,913  INFO - 19 years old
+14:34:13,714  INFO - Button 'check person #7' :: Clicking
+14:34:15,554  INFO - 18 years old
+14:34:17,428  INFO - Button 'check person #8' :: Clicking
+14:34:19,412  INFO - 20 years old
+14:34:21,103  INFO - Button 'check person #9' :: Clicking
+14:34:23,808  INFO - 23 years old
+14:34:25,610  INFO - Button 'check person #10' :: Clicking
+14:34:27,486  INFO - 23 years old
+14:34:29,153  INFO - Button 'check person #11' :: Clicking
+14:34:31,073  INFO - 23 years old
+14:34:32,811  INFO - Button 'check person #12' :: Clicking
+14:34:34,814  INFO - 23 years old
+14:34:36,611  INFO - Button 'check person #13' :: Clicking
+14:34:38,671  INFO - 23 years old
+14:34:40,469  INFO - Button 'check person #14' :: Clicking
+14:34:42,405  INFO - 20 years old
+14:34:44,251  INFO - Button 'check person #15' :: Clicking
+14:34:46,216  INFO - 18 years old
+14:34:47,831  INFO - Button 'check person #16' :: Clicking
+14:34:49,760  INFO - 18 years old
+14:34:51,631  INFO - Button 'check person #17' :: Clicking
+14:34:53,562  INFO - 19 years old
+14:34:55,452  INFO - Button 'check person #18' :: Clicking
+14:34:57,573  INFO - 21 years old
+14:34:59,493  INFO - Button 'check person #19' :: Clicking
+14:35:01,481  INFO - 19 years old
+14:35:03,342  INFO - Button 'check person #20' :: Clicking
+14:35:05,327  INFO - 23 years old
+14:35:07,269  INFO - Button 'check person #21' :: Clicking
+14:35:09,137  INFO - 18 years old
+14:35:10,782  INFO - Button 'check person #22' :: Clicking
+14:35:12,753  INFO - 21 years old
+14:35:15,068  INFO - Button 'check person #23' :: Clicking
+14:35:17,100  INFO - 20 years old
+14:35:18,957  INFO - Button 'check person #24' :: Clicking
+14:35:21,222  INFO - 19 years old
+14:35:23,094  INFO - 
+14:35:23,095  INFO - ****************************************************************************
+14:35:23,095  INFO - ***** Test case: 'by.maretsky.mailru.tests.loveTests.LoveTest' Passed! *****
+14:35:23,095  INFO - ****************************************************************************
+14:35:23,095  INFO - 
+14:35:24,219  INFO - driver.quit...
+14:35:24,219  INFO - killing processes
+Tests run: 5, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 268.232 sec <<< FAILURE! - in TestSuite
+xTest(by.maretsky.mailru.tests.filmsTests.FilmsTest)  Time elapsed: 11.008 sec  <<< FAILURE!
+java.lang.AssertionError: it's not right year expected [true] but found [false] expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at webdriver.Logger.fatal(Logger.java:255)
+	at webdriver.BaseTest.xTest(BaseTest.java:34)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:217)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:92)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+
+xTest(by.maretsky.mailru.tests.hiTechTests.HiTechCatalogTest)  Time elapsed: 12.426 sec  <<< FAILURE!
+java.lang.AssertionError: 18999: Price is not right expected [true] but found [false] expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at webdriver.Logger.fatal(Logger.java:255)
+	at webdriver.BaseTest.xTest(BaseTest.java:34)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:217)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:92)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+
+
+Results :
+
+Failed tests: 
+  FilmsTest>BaseTest.xTest:34 it's not right year expected [true] but found [false] expected [true] but found [false]
+  HiTechCatalogTest>BaseTest.xTest:34 18999: Price is not right expected [true] but found [false] expected [true] but found [false]
+
+Tests run: 5, Failures: 2, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 04:37 min
+[INFO] Finished at: 2016-11-22T14:35:24+03:00
+[INFO] Final Memory: 24M/170M
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.16:test (default-test) on project project_mailru: There are test failures.
+[ERROR] 
+[ERROR] Please refer to C:\Users\Dmitry\.jenkins\jobs\test\workspace\target\surefire-reports for the individual test results.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+Build step 'Вызвать цели Maven верхнего уровня  ' marked build as failure
+Finished: FAILURE
